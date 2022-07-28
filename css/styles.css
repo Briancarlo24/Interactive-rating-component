@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
 html {
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
+  font-size: 62.5%;
 }
 *,
 ::after,
@@ -8,4 +11,119 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+}
+
+/* COLORS */
+:root {
+  --orange: hsl(25, 97%, 53%);
+
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --light-grey-2: hsla(217, 12%, 63%, 0.1);
+  --light-grey-3: hsla(217, 12%, 63%, 0.8);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --vd-blue: hsl(216, 12%, 8%);
+
+  /* font-family: 'Overpass', sans-serif; */
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--light-grey);
+}
+.attribution a {
+  color: var(--white);
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: "Overpass", sans-serif;
+  background-color: var(--vd-blue);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  /* border: 1px solid red; */
+  background-color: var(--dark-blue);
+  border-radius: 2.5rem;
+  width: 40rem;
+  padding: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+h1 {
+  color: var(--white);
+  margin-top: 3rem;
+}
+
+p {
+  color: var(--light-grey);
+  line-height: 2.4rem;
+}
+
+.img_star {
+  text-align: left;
+  background-color: var(--light-grey-2);
+
+  align-self: flex-start;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+}
+
+.img_star img {
+  display: block;
+  margin: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rating_container {
+  display: flex;
+  justify-content: space-between;
+  color: var(--white);
+  font-size: 1.2em;
+  margin-block: 1.5rem;
+}
+
+.rating_container div {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  background-color: var(--light-grey-2);
+  display: grid;
+  place-content: center;
+  color: var(--light-grey-3);
+  cursor: pointer;
+}
+
+.rating_container div:active {
+  background-color: var(--light-grey-3);
+  color: var(--white);
+}
+
+.btn_submit {
+  background-color: var(--orange);
+  border: none;
+  border-radius: 50px;
+  color: var(--white);
+  cursor: pointer;
+  padding-block: 1.5rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+}
+
+.btn_submit:active {
+  background-color: var(--white);
+  color: var(--orange);
 }
