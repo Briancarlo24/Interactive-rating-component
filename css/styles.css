@@ -45,20 +45,21 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 50px;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: 50px;
 }
 
 main {
   /* border: 1px solid red; */
   background-color: var(--dark-blue);
   border-radius: 2.5rem;
-  width: 40rem;
+  width: 41rem;
   padding: 3.5rem;
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
+  min-height: 45rem;
 }
 
 h1 {
@@ -95,7 +96,7 @@ p {
   margin-block: 1.5rem;
 }
 
-.rating_container div {
+.rating {
   width: 5rem;
   height: 5rem;
   border-radius: 100%;
@@ -106,8 +107,8 @@ p {
   cursor: pointer;
 }
 
-.rating_container div:active {
-  background-color: var(--light-grey-3);
+.rating_container div:hover {
+  background-color: var(--orange);
   color: var(--white);
 }
 
@@ -126,4 +127,39 @@ p {
 .btn_submit:active {
   background-color: var(--white);
   color: var(--orange);
+}
+
+/* THANK YOU */
+.selected {
+  background-color: var(--light-grey-2);
+  border-radius: 2.5rem;
+  color: var(--orange);
+  padding: 1rem 2.5rem;
+  text-align: center;
+  width: max-content;
+  font-size: 1.1em;
+  margin-top: 2.5rem;
+}
+
+.thank_you,
+.thank_desc {
+  text-align: center;
+}
+
+/* END OF THANK YOU */
+
+/* utility classes */
+
+.hidden {
+  display: none;
+}
+
+.center {
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.rating--active {
+  background-color: var(--light-grey-3);
+  color: var(--white);
 }

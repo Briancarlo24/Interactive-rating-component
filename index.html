@@ -17,35 +17,39 @@
   </head>
   <body>
     <!-- Rating state start -->
-    <main>
+    <main class="main">
       <figure class="img_star">
         <img src="images/icon-star.svg" alt="" />
       </figure>
-      <h1>How did we do?</h1>
-      <p>
+      <h1 class="title">How did we do?</h1>
+      <p class="desc">
         Please let us know how we did with your support request. All feedback is
         appreciated to help us improve our offering!
       </p>
       <div class="rating_container">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
+        <div class="rating">1</div>
+        <div class="rating">2</div>
+        <div class="rating">3</div>
+        <div class="rating">4</div>
+        <div class="rating">5</div>
       </div>
       <button class="btn_submit">Submit</button>
+
+      <!-- You selected -->
+      <figure class="img_thank-you hidden">
+        <img src="images/illustration-thank-you.svg" alt="thank you image" />
+      </figure>
+
+      <div class="selected hidden">
+        You selected <span class="myRating">232</span> out of 5
+      </div>
+
+      <h1 class="thank_you hidden">Thank you!</h1>
+      <p class="thank_desc hidden">
+        We appreciate you taking the time to give a rating. If you ever need
+        more support, don’t hesitate to get in touch!
+      </p>
     </main>
-
-    <!-- Rating state end -->
-
-    <!-- Thank you state start -->
-
-    <!-- You selected -->
-    <!-- Add rating here -->
-    <!-- out of 5 Thank you! We appreciate you taking the time to give a rating. If
-    you ever need more support, don’t hesitate to get in touch! -->
-
-    <!-- Thank you state end -->
 
     <div class="attribution">
       Challenge by
@@ -56,5 +60,7 @@
         >Brian Carlo Birondo</a
       >.
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
