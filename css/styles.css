@@ -49,19 +49,28 @@ body {
   justify-content: center;
   gap: 50px;
 }
-
+@media only screen and (max-width: 450px) {
+  body {
+    padding: 1rem;
+  }
+}
 main {
   /* border: 1px solid red; */
   background-color: var(--dark-blue);
   border-radius: 2.5rem;
-  width: 41rem;
+  max-width: 41rem;
   padding: 3.5rem;
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
   min-height: 45rem;
 }
-
+@media only screen and (max-width: 375px) {
+  main {
+    padding: 2.5rem;
+    min-width: 35rem;
+  }
+}
 h1 {
   color: var(--white);
   margin-top: 3rem;

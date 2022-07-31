@@ -8,7 +8,8 @@ const imgThankYou = document.querySelector(".img_thank-you");
 const selected = document.querySelector(".selected");
 const thankYou = document.querySelector(".thank_you");
 const thankDesc = document.querySelector(".thank_desc");
-let newRating = 0;
+const defaultRating = document.querySelector(".myRating").textContent;
+let newRating;
 
 ratingContainer.addEventListener("click", function (e) {
   e.preventDefault();
@@ -20,12 +21,12 @@ ratingContainer.addEventListener("click", function (e) {
     if (click != clicked) click.classList.remove("rating--active");
   });
 
-  console.log(newRating);
   clicked.classList.add("rating--active");
 });
 
 btnSubmit.addEventListener("click", function (e) {
   e.preventDefault();
+
   imgStar.classList.add("hidden");
   title.classList.add("hidden");
   desc.classList.add("hidden");
@@ -33,15 +34,17 @@ btnSubmit.addEventListener("click", function (e) {
   btnSubmit.classList.add("hidden");
   main.classList.add("center");
 
-  //  Thank you Section
   imgThankYou.classList.remove("hidden");
   selected.classList.remove("hidden");
   thankYou.classList.remove("hidden");
   thankDesc.classList.remove("hidden");
 
-  //   ratingContainer.forEach((data) => {
-  //     data.classList.contains("rating--active");
-  //   });
+  const active = document.querySelectorAll(".rating");
 
-  document.querySelector(".myRating").innerHTML = newRating;
+  active.forEach((d, i) => {
+    if (d.classList.contains("rating--active")) {
+      newRating = i + 1;
+      document.querySelector(".myRating").textContent = newRating;
+    }
+  });
 });
